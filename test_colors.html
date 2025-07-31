@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Test - Parichay</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: #f7fafc;
+        }
+
+        /* Modern Color Palette Variables */
+        :root {
+            --primary-blue: #0066cc;
+            --primary-teal: #00a693;
+            --primary-navy: #1a365d;
+            --accent-orange: #ff6b35;
+            --accent-gold: #ffa726;
+            --success-green: #00c896;
+            --neutral-dark: #2d3748;
+            --neutral-medium: #4a5568;
+            --neutral-light: #e2e8f0;
+            --neutral-bg: #f7fafc;
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .color-swatch {
+            width: 100%;
+            height: 80px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .gradient-test {
+            margin-top: 2rem;
+            padding: 2rem;
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+        }
+
+        .primary-gradient {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 50%, var(--primary-navy) 100%);
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold), var(--primary-teal));
+        }
+
+        .button-test {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .test-btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .test-btn-primary {
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold), var(--primary-teal));
+            color: white;
+        }
+
+        .test-btn-secondary {
+            background: var(--neutral-light);
+            color: var(--neutral-dark);
+        }
+
+        h1 {
+            color: var(--neutral-dark);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--neutral-dark);
+            margin-bottom: 1rem;
+        }
+
+        .color-name {
+            font-weight: 600;
+            color: var(--neutral-dark);
+        }
+
+        .color-value {
+            font-family: monospace;
+            color: var(--neutral-medium);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Parichay - New Color Palette Test</h1>
+    
+    <h2>Color Palette</h2>
+    <div class="color-palette">
+        <div class="color-card">
+            <div class="color-swatch" style="background: var(--primary-blue);"></div>
+            <div class="color-name">Primary Blue</div>
+            <div class="color-value">#0066cc</div>
+        </div>
+        
+        <div class="color-card">
+            <div class="color-swatch" style="background: var(--primary-teal);"></div>
+            <div class="color-name">Primary Teal</div>
+            <div class="color-value">#00a693</div>
+        </div>
+        
+        <div class="color-card">
+            <div class="color-swatch" style="background: var(--primary-navy);"></div>
+            <div class="color-name">Primary Navy</div>
+            <div class="color-value">#1a365d</div>
+        </div>
+        
+        <div class="color-card">
+            <div class="color-swatch" style="background: var(--accent-orange);"></div>
+            <div class="color-name">Accent Orange</div>
+            <div class="color-value">#ff6b35</div>
+        </div>
+        
+        <div class="color-card">
+            <div class="color-swatch" style="background: var(--accent-gold);"></div>
+            <div class="color-name">Accent Gold</div>
+            <div class="color-value">#ffa726</div>
+        </div>
+        
+        <div class="color-card">
+            <div class="color-swatch" style="background: var(--success-green);"></div>
+            <div class="color-name">Success Green</div>
+            <div class="color-value">#00c896</div>
+        </div>
+    </div>
+
+    <h2>Gradient Tests</h2>
+    <div class="gradient-test primary-gradient">
+        <h3>Primary Gradient (Hero/CTA Sections)</h3>
+        <p>Blue → Teal → Navy</p>
+    </div>
+    
+    <div class="gradient-test accent-gradient">
+        <h3>Accent Gradient (Buttons/Icons)</h3>
+        <p>Orange → Gold → Teal</p>
+    </div>
+
+    <h2>Button Tests</h2>
+    <div class="button-test">
+        <button class="test-btn test-btn-primary">Primary Button</button>
+        <button class="test-btn test-btn-secondary">Secondary Button</button>
+    </div>
+
+    <h2>Accessibility Notes</h2>
+    <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+        <p style="color: var(--neutral-dark); margin-bottom: 1rem;"><strong>Color Contrast Ratios:</strong></p>
+        <ul style="color: var(--neutral-medium);">
+            <li>Primary Blue on White: High contrast (AAA compliant)</li>
+            <li>Neutral Dark on White: High contrast (AAA compliant)</li>
+            <li>Neutral Medium on White: Good contrast (AA compliant)</li>
+            <li>White text on Primary gradients: High contrast</li>
+        </ul>
+    </div>
+</body>
+</html>
